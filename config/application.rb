@@ -34,7 +34,7 @@ module AnythingApi
 
 config.middleware.use Rack::Cors do
   allow do
-    origins '*' 
+    origins 'https://kjk-blog-front.netlify.app' 
     resource '*',
     headers: :any,
     expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],

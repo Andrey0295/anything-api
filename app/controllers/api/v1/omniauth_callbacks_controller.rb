@@ -25,6 +25,7 @@ class Api::V1::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksC
       'token-type': 'Bearer'
     }
     redirect_to "https://kjk-blog-front.netlify.app/login?token=#{ui_token.to_json}"
+    # redirect_to "http://localhost:3001/login?token=#{ui_token.to_json}"
   end
 
 end

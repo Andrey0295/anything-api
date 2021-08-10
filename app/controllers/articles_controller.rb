@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
     article.user_id = current_user.id
     article.save
     
+    
     if article.save
        render json: article
     else
@@ -42,5 +43,5 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body, :article_id)
   end
-  
+
 end
