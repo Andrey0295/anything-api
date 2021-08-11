@@ -31,6 +31,8 @@ module AnythingApi
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    # origins 'http://localhost:3001' 
 
 config.middleware.use Rack::Cors do
   allow do

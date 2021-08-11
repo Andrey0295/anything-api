@@ -1,15 +1,19 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
+
    def index
      articles = Article.all
      render json: articles
   end
 
   def create
-    
-    article = Article.new(article_params)
-    article.user_id = current_user.id
+    article = Article.new(
+      user_id: current_user[:id],
+      title: params[:title],
+      body: params[:body]
+    )
+
     article.save
-    
     
     if article.save
        render json: article
@@ -19,14 +23,14 @@ class ArticlesController < ApplicationController
 
   end
 
-   def show_my_articles
+  def show_my_articles
      article = Article.where(user_id: current_user.id)
      render json: article
-   end
+  end
 
-   def update
+  def update
     article = Article.find(params[:article_id])
-    article.update(article_params)
+    article.update(title: params[:title], body: params[:body])
 
     article.save
 
@@ -39,7 +43,9 @@ class ArticlesController < ApplicationController
     article = Article.find(params[:id])
     article.destroy
   end
- 
+
+  private 
+
   def article_params
     params.require(:article).permit(:title, :body, :article_id)
   end
