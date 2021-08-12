@@ -33,10 +33,11 @@ module AnythingApi
     # config.eager_load_paths << Rails.root.join("extras")
     
     # origins 'http://localhost:3001' 
+    #  origins 'https://kjk-blog-front.netlify.app' 
 
 config.middleware.use Rack::Cors do
   allow do
-    origins 'https://kjk-blog-front.netlify.app' 
+     origins 'https://kjk-blog-front.netlify.app' 
     resource '*',
     headers: :any,
     expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
