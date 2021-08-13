@@ -1,1 +1,6 @@
 language: ruby
+deploy:
+  provider: heroku
+  app: "infinite-escarpment-83664"
+  api_key:
+    secure: "4ae348e0-7d3b-423b-87cf-bd677321c547"
