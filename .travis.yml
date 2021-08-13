@@ -1,5 +1,21 @@
-language: ruby
+language: 
+ — ruby
+rvm:
+ — 2.5.0
+cache:
+ — bundler
+script:
+ — bundle install
+ — bin/rails db:create
+ — bin/rails db:migrate
+ — bundle exec rspec
+services:
+ — postgresql
+# deployment details - add while setting up Heroku 
 deploy:
   provider: heroku
-  api_key: 4ae348e0-7d3b-423b-87cf-bd677321c547
-  strategy: git
+ api_key:
+  secure: "4ae348e0-7d3b-423b-87cf-bd677321c547"
+app: infinite-escarpment-83664
+  on:
+ repo: Andrey0295/anything-api
