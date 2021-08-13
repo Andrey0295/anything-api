@@ -1,13 +1,27 @@
 language: ruby
+cache:
+  - bundler
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake assets:precompile
 deploy:
   provider: heroku
+  api_key:
+    secure: 4ae348e0-7d3b-423b-87cf-bd677321c547
+  app: infinite-escarpment-83664
+  on:
+    repo: Andrey0295/anything-api
+# language: ruby
+# deploy:
+#   provider: heroku
 
-  script:
-    - bundle install
-  run:
-    - rake db:create
-    - rake db:migrate
-  strategy: git
+#   script:
+#     - bundle install
+#   run:
+#     - rake db:create
+#     - rake db:migrate
+#   strategy: git
 # rvm:
 #  - 2.5.0
 # cache:
