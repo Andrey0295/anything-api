@@ -2,9 +2,8 @@ language: ruby
 cache:
   - bundler
 before_script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-  - bundle exec rake assets:precompile
+  - bin/rails db:create
+  - bin/rails rake db:migrate
 deploy:
   provider: heroku
   api_key:
