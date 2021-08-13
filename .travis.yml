@@ -17,7 +17,8 @@ deploy:
   secure: "4ae348e0-7d3b-423b-87cf-bd677321c547"
 app: infinite-escarpment-83664
   on:
- repo: Andrey0295/anything_api
+ repo: Andrey0295 / anything-api
+
 
 
  
