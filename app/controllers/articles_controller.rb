@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     if article.save
        render json: article
     else
-      render json: { errors:  'Somthing went wrong'  }
+      render json: { errors:  'Something went wrong'  }
     end
 
   end
