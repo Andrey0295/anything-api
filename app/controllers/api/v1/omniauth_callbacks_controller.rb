@@ -10,7 +10,7 @@ class Api::V1::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksC
       user.uid = auth_info.uid
       user.email = auth_info.info.email
       user.name = auth_info.info.name
-    end
+    end 
     token = DeviseTokenAuth::TokenFactory.create
     user.tokens[token.client] = {
       token:  token.token_hash,

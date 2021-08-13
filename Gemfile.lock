@@ -267,7 +267,9 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    ripper-tags (0.9.0)
     ruby2_keywords (0.0.5)
+    rufo (0.13.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -304,11 +306,13 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 6.1.4)
+  ripper-tags
   rspec-core!
   rspec-expectations!
   rspec-mocks!
   rspec-rails!
   rspec-support!
+  rufo
   spring
   tzinfo-data
 

@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+AddUserRefToArticles	db/migrate/20210805082115_add_user_ref_to_articles.rb	/^class AddUserRefToArticles < ActiveRecord::Migration[6.1]$/;"	c	inherits:ActiveRecord.Migration
+AnythingApi	config/application.rb	/^module AnythingApi$/;"	m
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:AnythingApi	inherits:Rails.Application
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::API$/;"	c	inherits:ActionController.API
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c	inherits:ActiveJob.Base
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c	inherits:ActionMailer.Base
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c	inherits:ActiveRecord.Base
+Article	app/models/article.rb	/^class Article < ApplicationRecord$/;"	c	inherits:ApplicationRecord
+ArticlesController	app/controllers/articles_controller.rb	/^class ArticlesController < ApplicationController$/;"	c	inherits:ApplicationController
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable	inherits:ActionCable.Channel.Base
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable	inherits:ActionCable.Connection.Base
+CreateArticles	db/migrate/20210805080836_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration[6.1]$/;"	c	inherits:ActiveRecord.Migration
+CurrentUsersController	app/controllers/current_users_controller.rb	/^class CurrentUsersController < ApplicationController$/;"	c	inherits:ApplicationController
+DeviseTokenAuthCreateUsers	db/migrate/20210802154444_devise_token_auth_create_users.rb	/^class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.1]$/;"	c	inherits:ActiveRecord.Migration
+OmniauthCallbacksController	app/controllers/api/v1/omniauth_callbacks_controller.rb	/^class Api::V1::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksController$/;"	c	class:Api.V1	inherits:DeviseTokenAuth.OmniauthCallbacksController
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c	inherits:ActiveRecord.Base
+article_ids	app/models/user.rb	/^  has_many :articles$/;"	F	class:User
+article_ids=	app/models/user.rb	/^  has_many :articles$/;"	F	class:User
+article_params	app/controllers/articles_controller.rb	/^  def article_params$/;"	f	class:ArticlesController
+articles	app/models/user.rb	/^  has_many :articles$/;"	F	class:User
+articles=	app/models/user.rb	/^  has_many :articles$/;"	F	class:User
+build_user	app/models/article.rb	/^    belongs_to :user$/;"	F	class:Article
+change	db/migrate/20210802154444_devise_token_auth_create_users.rb	/^  def change$/;"	f	class:DeviseTokenAuthCreateUsers
+change	db/migrate/20210805080836_create_articles.rb	/^  def change$/;"	f	class:CreateArticles
+change	db/migrate/20210805082115_add_user_ref_to_articles.rb	/^  def change$/;"	f	class:AddUserRefToArticles
+create	app/controllers/articles_controller.rb	/^  def create$/;"	f	class:ArticlesController
+create_user	app/models/article.rb	/^    belongs_to :user$/;"	F	class:Article
+create_user!	app/models/article.rb	/^    belongs_to :user$/;"	F	class:Article
+delete	app/controllers/articles_controller.rb	/^  def delete$/;"	f	class:ArticlesController
+index	app/controllers/articles_controller.rb	/^   def index$/;"	f	class:ArticlesController
+me	app/controllers/current_users_controller.rb	/^    def me$/;"	f	class:CurrentUsersController
+omniauth_success	app/controllers/api/v1/omniauth_callbacks_controller.rb	/^ def omniauth_success$/;"	f	class:Api.V1.OmniauthCallbacksController
+show_my_articles	app/controllers/articles_controller.rb	/^  def show_my_articles$/;"	f	class:ArticlesController
+update	app/controllers/articles_controller.rb	/^  def update$/;"	f	class:ArticlesController
+user	app/models/article.rb	/^    belongs_to :user$/;"	F	class:Article
+user=	app/models/article.rb	/^    belongs_to :user$/;"	F	class:Article

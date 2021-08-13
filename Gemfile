@@ -19,6 +19,11 @@ gem 'puma', '~> 5.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# gem for VSCode ctags-plagin
+gem 'ripper-tags'
+
+gem 'rufo'
+
 gem 'devise_token_auth'
 
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
