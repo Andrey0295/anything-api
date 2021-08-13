@@ -10,7 +10,7 @@ test:
   adapter: postgresql
   database: anything_api_test
 script:
-  - rspec --format documentation
+  - bundle exec rspec spec --format documentation
 deploy:
   provider: heroku
   api_key:
