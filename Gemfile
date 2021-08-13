@@ -22,7 +22,7 @@ gem 'puma', '~> 5.0'
 # gem for VSCode ctags-plagin
 gem 'ripper-tags'
 
-# gem 'travis'
+
 
 gem 'rufo'
 
