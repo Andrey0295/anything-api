@@ -9,6 +9,8 @@ before_script:
 test:
   adapter: postgresql
   database: anything_api_test
+script:
+  - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
