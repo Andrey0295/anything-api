@@ -18,12 +18,12 @@ RSpec.describe Article, type: :model do
       it 'timestamps should be DateTime' do
         expect(subject.created_at).to be_falsey
       end
-      it 'user_id should be 1' do
+      it 'user_id should be equal 1' do
         expect(subject.user_id).to eq(1)
       end
     end
 
-    context 'edit article item' do
+    context 'edit article' do
       subject do
         Article.create(
           user_id: 1,
