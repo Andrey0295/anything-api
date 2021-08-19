@@ -29,7 +29,7 @@ it 'returns expiry in authentication header' do
 it 'returns uid in authentication header' do
         expect(response.headers['uid']).to be_present
       end
-    end
+    end  
 context 'when login params is invalid' do
       before { post @sign_in_url }
 it 'returns unathorized status 401' do
@@ -53,4 +53,23 @@ it 'returns status 200' do
     end
     
   end
+describe 'GET /me' do
+    before  do
+        post @sign_in_url, params: @login_params, as: :json
+        @headers = {
+        'uid' => response.headers['uid'],
+        'client' => response.headers['client'],
+        'access-token' => response.headers['access-token']
+      }
+    end
+it 'get returns current_user' do
+        get '/me', headers: @headers
+        expect(response).to have_http_status(200)
+    end
+it 'get returns status 401, if user unauthorazed' do
+        get '/me' 
+        expect(response).to have_http_status(401)  
+    end
+
+  end  
 end
